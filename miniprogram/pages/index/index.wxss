@@ -1,0 +1,254 @@
+page {
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+/* .body{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.bg-img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+} */
+
+.header {
+  /* height: 35px; */
+  margin: 0 40rpx;
+  padding-top: 160rpx;
+}
+
+.word {
+  /* color: rgba(242, 100, 40 , 0.4); */
+  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* text-decoration: underline;  下划线*/
+  font-size: 60rpx;
+  font-weight: bolder;
+  float: left;
+  animation: slide_up 2s ease;
+
+}
+@keyframes slide_up{
+   0% {margin-top: -200rpx;}
+  /* 50% {margin-top: -100rpx;} */
+  100% {margin-top: 0rpx;}
+}
+
+/* .line{
+  margin-left: 40rpx;
+  width: 350rpx;
+  height: 4rpx;
+  background: black;
+  margin-top: 56rpx;
+  animation: underline 2s linear;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes underline{
+  0% {width: 0rpx;opacity: 0.1}
+  100% {width: 350rpx;opacity: 1}
+} */
+
+/* .icon1 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  float: right;
+} */
+
+
+.icon1 {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  float: right;
+  animation: headRotate 5s linear infinite
+}
+
+/* 头像旋转效果  */
+@keyframes headRotate{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+
+/* .icon1 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  float: right;
+
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+
+.icon1:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+} */
+
+.search {
+  width: 100%;
+  height: 70rpx;
+  margin: 120rpx auto;
+}
+
+.se-band {
+  height: 70rpx;
+  margin: 20rpx 40rpx 10rpx;
+  border-radius: 50rpx;
+  background-color: rgb(204, 204, 204);
+}
+
+.input1 {
+  width: 90%;
+  height: 70rpx;
+  padding: 10rpx 30rpx;
+  float: left;
+}
+
+.search-img {
+  padding-top: 22rpx;
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+}
+
+.tip-words {
+  font-family: Microsoft Yahei;
+  margin: 0 40rpx 20rpx 70rpx;
+  font-size: 24rpx;
+}
+
+.container {
+  height: 550rpx;
+  margin: 0rpx 40rpx 0 ;
+
+  /* background-color: red; */
+}
+
+.pro-body {
+  /* height: 350px; */
+  margin: 0 auto;
+  
+}
+
+/* .pro-title {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 40rpx;
+} */
+
+.items-list {
+  
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  overflow: hidden;
+  /* padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%; */
+}
+
+/* .pro-item {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+} */
+
+.pro-bodydiv {
+  
+  /* opacity: 0.9; */
+  flex: 0 0 44%;
+  height: 270rpx;
+  /* margin-top: 5%;*/
+  /* margin-left: 2%; */
+  /* margin-right: 10%; */
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+  border-radius: 25rpx;
+  /* background: white; */
+  text-align: center;
+  box-shadow: 0rpx 0rpx 16rpx rgba(185, 181, 181,0.8) ;
+}
+
+.pro-img {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.pro-name {
+  font-size: 25rpx;
+  color: #666;
+  position: relative;
+  width: 100%;
+  top: 5rpx;
+  align-content: center;
+  text-align: center;
+}
+
+/* .play_img{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 50rpx 40rpx 0;
+  bottom: 40rpx;
+  left: 0;
+  position: absolute;
+} */
+
+/* .padding-xlmy{
+  padding: 180rpx;
+} */
+
+
+.img-plus-style {
+  height: 70rpx;
+  width: 70rpx;
+  position: absolute;
+  bottom: 120rpx;
+  left: 50rpx;
+  z-index: 100;
+}
+ 
+.img-style {
+  height: 70rpx;
+  width: 70rpx;
+  position: absolute;
+  bottom: 60rpx;
+  left: 50rpx;
+  opacity: 0;
+}
+
+/* 头像的样式 */
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  background-image: "cloud://kurtery-00904xu.abe4-kurtery-00904xu-1256437324/sth_/da.gif"
+
+}
+.radius-my{
+  border-radius: 50%;
+  background-size: cover;
+}
+
+/*DISCOVER从上往下淡入*/
+.slide_up_1{
+  margin-top: -200px;
+  opacity: 1;
+}

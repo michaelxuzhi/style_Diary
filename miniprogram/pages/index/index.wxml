@@ -1,0 +1,149 @@
+<view  style="height:{{screenHeight}}px;background: {{page_bgc}}">
+
+<!-- header -->
+  <view class="header">
+    <view class="word"  style="color:{{word_bgc}}" >DISCOVER</view>
+    
+    <view class="icon1">
+  <button open-type="getUserInfo" class=" icon1 radius-my"  bindgetuserinfo="onGetUserInfo" style="background-image:url({{avatarUrl}});" bindtouchstart="changeBGC" bindtouchend="backBGC" bindlongpress='longpress'></button>
+</view>
+    
+    
+    <!-- <image class="icon1" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" style="background-image:url({{avatarUrl}});"src="cloud://kurtery-00904xu.abe4-kurtery-00904xu/sth_/da.gif" bindtouchstart="changeBGC" bindtouchend="backBGC" bindlongpress='longpress'></image> -->
+
+  </view>
+<!-- <view class="line"></view> 这是个沙雕东西-->
+
+<!-- search -->
+  <view class="search">
+    <view  class="se-band" style="opacity:{{band_opa}}">
+      <input class="input1" style="color: {{in_color}};" maxlength="20" placeholder="nihao!"></input>
+      <!-- <image class="search-img" src="../../images/search.png"></image> -->
+      <view class="icon-search search-img"></view>
+    </view>
+    <view class="tip-words" style="color: {{tip_bgc}}">{{tip_words1}}</view>
+  </view>
+
+
+
+
+
+<scroll-view scroll-y='true'>
+
+<!-- container -->
+<view class="container">
+  <view class="pro-body">
+
+  <!-- //这是swiper和items-list之间的文本 
+  <text class='pro-title'>选择你的心情</text> 
+  -->
+
+  <view class='items-list'>
+    <block class='pro-item' wx:for="{{proList}}" wx:key="userInfoListId">
+       <view class='pro-bodydiv' style="background: {{pro_color}}" bindtap="showModal" data-target="bottomModal" data-id='{{item._id}}'> <!--data-index='{{index}}' -->
+        <image class='pro-img' src='{{item.toppic}}' />
+        <view class='pro-name'>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+</view>
+
+
+
+ <!-- <view id="red" style="background: red; width: 100%; height: 100%;display: inline-block">1</view>
+  <view id="green" style="background: green; width: 100%; height: 100%;display: inline-block">2</view>
+  <view id="blue" style="background: blue; width: 100%; height: 100%;display: inline-block">3</view>
+  <view id="yellow" style="background: yellow; width: 100%; height: 100%;display: inline-block">4</view> -->
+</scroll-view>
+
+  <!--底部模态栏-->
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog" catchtap>
+    <view class="cu-bar bg-white">
+      <view class="action text-green"bindtap="hideModal">确定</view>
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+    </view> 
+  <view>{{modal_word}}</view>
+
+  <!-- <textarea style="margin:0 auto" class="{{textareaAValue?'value':' '}}" bindinput="textareaAInput"></textarea> -->
+
+
+      <!-- <view class="cu-form-group top">
+  <view class="title">心情
+    <text class="icon-evaluate text-orange"></text>
+  </view>
+  <textarea placeholder="记录今天的心情..." maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder"  class="{{textareaAValue?'value':' '}}" bindinput="textareaAInput"></textarea> </view>-->
+</view>
+   
+  
+    
+  
+</view>
+
+
+
+<!-- <switch class="sm" bindchange="SetShadow"></switch> -->
+<!-- <view class="padding text-center">
+<view class="padding-xl radius shadow-blur bg-red margin-top">根据背景颜色而改变的阴影</view>
+<view class="padding-xl radius shadow-blur bg-red margin-top bg-img" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"><view>根据背景颜色而改变的阴影</view></view>
+</view> -->
+
+
+
+<!-- <image class="play_img" src="https://kurtery-00904xu.tcb.qcloud.la/sth_/play_big3.png?sign=294f4676b1f09987bd7a00a57270ee2e&t=1565599667"></image> -->
+
+	
+<!-- <image class="play_img" src="https://kurtery-00904xu.tcb.qcloud.la/sth_/pen_big.png?sign=c94705ebf50818bc612582a4c3c426f4&t=1565627564"></image> -->
+
+
+
+
+<view>
+  <image src="cloud://kurtery-00904xu.abe4-kurtery-00904xu/sth_/pen.png" class="img-style" animation="{{animTranspond}}" bindtap="transpond"></image>
+
+  <image src="cloud://kurtery-00904xu.abe4-kurtery-00904xu/sth_/sun.png" class="img-style" animation="{{animCollect}}" bindtap="collect">
+ </image>
+  
+  <image src="cloud://kurtery-00904xu.abe4-kurtery-00904xu/sth_/pic1.png" class="img-style" animation="{{animInput}}" bindtap="input"></image>
+  <image src="cloud://kurtery-00904xu.abe4-kurtery-00904xu/sth_/notebook.png" class="img-plus-style" animation="{{animPlus}}" bindtap="plus"></image>
+</view>
+
+<!--普通居中显示模态栏 
+<view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal">Modal</button>
+  </view>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">Modal标题</view>
+      <view class="action" bindtap="hideModal">
+        <text class="icon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      Modal 内容。
+    </view>
+  </view>
+</view> -->
+
+ <!--左右模态栏 
+ <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="DrawerModalL">Left</button>
+    <button class="cu-btn bg-blue shadow margin-left" bindtap="showModal" data-target="DrawerModalR">Right</button>
+  </view>
+</view>
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModalL'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{5}}" wx:key>
+        <view class="content">
+          <view>Item {{index +1}}</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+
+</view>
