@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # style_Diary
 结合云开发和ColorUI写的小程序。具有功能：用户上传图片，编辑心情，页面换肤等，微信云开发端存储用户数据，涉及基本数据库的增删改查，后台随机播放音乐，调用云函数获取用户信息，用户设备信息。
 <<<<<<< HEAD
@@ -17,5 +16,5 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
->>>>>>> 2019/08/12提交
->>>>>>> upload
+2019/08/12提交
+upload
